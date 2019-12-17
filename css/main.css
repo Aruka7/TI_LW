@@ -148,3 +148,80 @@ nav{
 	display: flex;
 	align-items: center;
 }
+/*комнаты*/
+.rooms{
+	background-color: #9e2629;
+}
+.rooms h1{
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	padding: 50px 0 30px 50px;
+}
+.content-rooms{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.room{
+	display: flex;
+	flex-direction: column;
+}
+.room img{
+	width: 450px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.room-btn{
+	width: 150px;
+	background-color: #e0ab04;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	margin-bottom: 30px;
+	transition: .2s all linear;
+}
+.room-btn:hover{
+	background-color: #f4b900;
+}
+/*контакты*/
+.contacts{
+	background-color: #f6eed5;
+}
+.contacts h1{
+	padding: 30px 0 20px 40px;
+}
+.ico{
+	width: 20px;
+}
+.ico-geo{
+	width: 14px;
+}
+.contacts-content{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 30px;
+}
+.contact-elem{
+	padding: 10px;
+	line-height: 30px;
+}
+.contact-elem span{
+	text-decoration: underline;
+}
+footer{
+	background-color: #3f2020;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.text-gold{
+	color: #ffd700;
+	font-size: 18px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
