@@ -14,8 +14,8 @@ header{
 	background-image: url(../img/bgHeader.jpg);
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
-	background-size: 110%;
-	height: 500px;
+	background-size: 100%;
+	padding-bottom: 35%;
 }
 .header-top{
 	display: flex;
