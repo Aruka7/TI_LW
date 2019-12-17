@@ -81,3 +81,70 @@ nav{
 .nav-link:hover{
 	color: #c21f24;
 }
+/* бронирование*/
+.book{
+	background-color: #c21f24;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.book-text{
+	padding: 10px 30px;
+}
+.bold-text{
+	color: #fff;
+	font-size: 25px;
+	line-height: 35px;
+}
+.book-form{
+	display: flex;
+}
+.form-text{
+	color: #fff;
+	font-size: 20px;
+	font-style: bold;
+	padding: 15px;
+}
+.form-input{
+	border-radius: 5px;
+	border: none;
+	width: 140px;
+	margin: auto;
+	padding: 7px;
+}
+.form-number{
+	width: 50px;
+	text-align: center;
+}
+.book-btn{
+	font-size: 20px;
+	border-radius: 7px;
+	border: none;
+	font-weight: bold;
+	padding: 8px 20px;
+	margin: auto 20px;
+	cursor: pointer;
+}
+.book-btn:hover{
+	background-color: #d4d4d4;
+}
+.history{
+	background-color: #f6eed5;
+}
+.history h1{
+	padding: 50px 0px 20px 70px;
+}
+.content{
+	display: flex;
+}
+.content img{
+	border-radius: 10px;
+	width: 450px;
+	margin: 20px 0 40px 40px;
+}
+.history-text{
+	font-size: 36px;
+	padding: 0 20px 0 20px;
+	display: flex;
+	align-items: center;
+}
