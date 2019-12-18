@@ -1,8 +1,12 @@
 main, header{
 	background-color: #f6eed5;
 }
+body{
+	display: flex;
+	flex-direction: column;
+}
 .wrap{
-	max-width: 70%;
+	max-width: 80%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -14,13 +18,15 @@ main, header{
 	display: flex;
 	flex-direction: column;
 	margin: 10px;
+	width: 30%;
+	min-width: 250px;
 }
 .room-text{
 	padding: 7px 0 7px 10px;
 }
 .room-display img{
 	border-radius: 10px 10px 0 0;
-	width: 350px;
+	width: 100%;
 }
 .sub-btn{
 	border-radius: 5px;
