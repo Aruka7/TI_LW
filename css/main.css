@@ -1,0 +1,227 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+header{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	background-image: url(../img/bgHeader.jpg);
+	background-repeat: no-repeat;
+	background-position: 50% 100%;
+	background-size: 100%;
+	padding-bottom: 35%;
+}
+.header-top{
+	display: flex;
+	justify-content: space-between;
+	background-color: rgba(155,45,48,0.9);
+	align-items: center;
+}
+.hotel-name{
+	font-size: 28px;
+	padding: 10px 10px;
+	color: #fff;
+}
+.logo{
+	width: 110px;
+	height: 110px;
+}
+.language{
+	background: #db9799;
+	border-radius: 5px;
+	margin-right: 20px;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+}
+.language:hover{
+	box-shadow:0 0 10px 5px red;
+}
+nav{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+.nav-panel{
+	display: flex;
+	background-color: rgba(56,42,0,0.8);
+}
+.nav-panel ul{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.border-none{
+	border: none;
+}
+.nav-panel ul li{
+	list-style: none;
+	border-right: 1px solid #fff;
+	display: flex;
+	flex-grow: 1;
+}
+.nav-link{
+	height: 58px;
+	color: #ffd700;
+	font-size: 20px;
+	font-style: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	transition: color .1s  linear;
+}
+.nav-link:hover{
+	color: #c21f24;
+}
+/* бронирование*/
+.book{
+	background-color: #c21f24;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.book-text{
+	padding: 10px 30px;
+}
+.bold-text{
+	color: #fff;
+	font-size: 25px;
+	line-height: 35px;
+}
+.book-form{
+	display: flex;
+}
+.form-text{
+	color: #fff;
+	font-size: 20px;
+	font-style: bold;
+	padding: 15px;
+}
+.form-input{
+	border-radius: 5px;
+	border: none;
+	width: 140px;
+	margin: auto;
+	padding: 7px;
+}
+.form-number{
+	width: 50px;
+	text-align: center;
+}
+.book-btn{
+	font-size: 20px;
+	border-radius: 7px;
+	border: none;
+	font-weight: bold;
+	padding: 8px 20px;
+	margin: auto 20px;
+	cursor: pointer;
+}
+.book-btn:hover{
+	background-color: #d4d4d4;
+}
+.history{
+	background-color: #f6eed5;
+}
+.history h1{
+	padding: 50px 0px 20px 70px;
+}
+.content{
+	display: flex;
+}
+.content img{
+	border-radius: 10px;
+	width: 450px;
+	margin: 20px 0 40px 40px;
+}
+.history-text{
+	font-size: 36px;
+	padding: 0 20px 0 20px;
+	display: flex;
+	align-items: center;
+}
+/*комнаты*/
+.rooms{
+	background-color: #9e2629;
+}
+.rooms h1{
+	color: #fff;
+	font-size: 36px;
+	font-weight: bold;
+	padding: 50px 0 30px 50px;
+}
+.content-rooms{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.room{
+	display: flex;
+	flex-direction: column;
+}
+.room img{
+	width: 450px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+.room-btn{
+	width: 150px;
+	background-color: #e0ab04;
+	border: none;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #fff;
+	padding: 10px;
+	cursor: pointer;
+	margin-bottom: 30px;
+	transition: .2s all linear;
+}
+.room-btn:hover{
+	background-color: #f4b900;
+}
+/*контакты*/
+.contacts{
+	background-color: #f6eed5;
+}
+.contacts h1{
+	padding: 30px 0 20px 40px;
+}
+.ico{
+	width: 20px;
+}
+.ico-geo{
+	width: 14px;
+}
+.contacts-content{
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 30px;
+}
+.contact-elem{
+	padding: 10px;
+	line-height: 30px;
+}
+.contact-elem span{
+	text-decoration: underline;
+}
+footer{
+	background-color: #3f2020;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.text-gold{
+	color: #ffd700;
+	font-size: 18px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
