@@ -23,6 +23,14 @@ header{
 	background-color: rgba(155,45,48,0.9);
 	align-items: center;
 }
+.header-right{
+	display: flex;
+	align-items: center;
+}
+.auth a{
+	color: #fff;
+	margin-right: 20px;
+}
 .hotel-name{
 	font-size: 28px;
 	padding: 10px 10px;
