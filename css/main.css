@@ -214,7 +214,8 @@ nav{
 }
 footer{
 	background-color: #3f2020;
-	min-height: 100px;
+	height: 100px;
+	flex-shrink: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;

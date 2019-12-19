@@ -28,6 +28,45 @@
 		</nav>
 	</header>
 	<main>
+		<div class="sidebar">
+			<h1>Сортировать по:</h1>
+			<div class="filter">
+			<form action="">
+				<div>
+					<div class="filter-text">Тип:</div>
+					<select class="filter-select" size="1" name="typeroom">
+					<option value="common">Стандартный</option>
+					<option value="vip">VIP</option>
+					</select>
+				</div>
+				<div>
+					<div class="filter-text">Свободен с</div>
+					<input class="filter-calendar filter-input" type="text" name="frstDate">
+				</div>
+				<div>
+					<div class="filter-text">до</div>
+					<input class="filter-calendar filter-input" type="text" name="lastDate">
+				</div>
+				<div>
+					<div class="filter-text">Стоимость в сутки от:</div>
+					<input class="filter-calendar filter-input" type="text" name="frstDate">
+				</div>
+				<div>
+					<div class="filter-text">до</div>
+					<input class="filter-calendar filter-input" type="text" name="lastDate">
+				</div>
+				<div>
+					<div class="filter-text">Кол-во человек</div>
+					<input class="filter-count filter-input" type="text" name="countPeople">
+				</div>
+				<div>
+					<div class="filter-text">Свободен:</div>
+					<input class="filter-checkbox" type="checkbox" name="isFree" checked>
+				</div>
+				<button class="filter-btn" type="submit">Найти</button>
+			</form>
+			</div>
+		</div>
 		<div class="wrap">
 			<div class="room-display">
 				<img src="img/room1.jpg" alt="room">
@@ -38,6 +77,8 @@
 					<span class="number"> №421</span>
 					<br>
 					<span class="count-members">до 2 мест<span>
+					<br>
+					<span class="cost">Стоимость в сутки 2000р.</span>
 				</div>
 				<button class="sub-btn">Забронировать</button>
 			</div>
@@ -50,6 +91,8 @@
 					<span class="number"> №421</span>
 					<br>
 					<span class="count-members">до 2 мест<span>
+					<br>
+					<span class="cost">Стоимость в сутки 2000р.</span>
 				</div>
 				<button class="sub-btn">Забронировать</button>
 			</div>
@@ -62,6 +105,8 @@
 					<span class="number"> №421</span>
 					<br>
 					<span class="count-members">до 2 мест<span>
+					<br>
+					<span class="cost">Стоимость в сутки 2000р.</span>
 				</div>
 				<button class="sub-btn">Забронировать</button>
 			</div>
