@@ -23,6 +23,14 @@ header{
 	background-color: rgba(155,45,48,0.9);
 	align-items: center;
 }
+.header-right{
+	display: flex;
+	align-items: center;
+}
+.auth a{
+	color: #fff;
+	margin-right: 20px;
+}
 .hotel-name{
 	font-size: 28px;
 	padding: 10px 10px;
@@ -214,7 +222,8 @@ nav{
 }
 footer{
 	background-color: #3f2020;
-	min-height: 100px;
+	height: 100px;
+	flex-shrink: 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
