@@ -1,5 +1,5 @@
 <header>
-		<a href="#"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
+		<a href="index.php"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
 		<nav>
 			<div class="header-top">
 				<div class="hotel-name">Grand-ele</div>
@@ -11,10 +11,15 @@
 					<div class="auth"><a href="authform.php">Войти</a></div>
 					<div class="auth"><a href="regform.php">Регистрация</a></div>
 					<?php else: 
-						$cook_arr = unserialize($_COOKIE['user'])
+						$cook_arr = unserialize($_COOKIE['user']);
 					?>
-						<img class="userimg" src="<?=$cook_arr['imgpath']?>" alt="Ico">
-						<div class="user-name"><a href=""><?=$cook_arr['name']?></a></div>
+						<div class="personal-area">
+							<a  href="personal_area.php">
+								<img class="userimg" src="<?=$cook_arr['imgpath']?>" alt="Ico">
+								<div class="user-name"><?=$cook_arr['name']?></div>
+							</a>
+						</div>
+						
 					<?php endif; ?>
 				</div>
 			</div>
