@@ -7,29 +7,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<a href="#"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
-		<nav>
-			<div class="header-top">
-				<div class="hotel-name">Grand-ele</div>
-				<div class="header-right">
-					<button class="language">Русский/English</button>
-					<div class="auth"><a href="authform.html">Войти</a></div>
-					<div class="auth"><a href="regform.html">Регистрация</a></div>
-				</div>
-			</div>
-			<div class="nav-panel">
-				<ul>
-					<li><a class="nav-link" href="#">О НАС</a></li>
-					<li><a class="nav-link" href="#">ОТЗЫВЫ</a></li>
-					<li><a class="nav-link" href="rooms.html">НОМЕРА</a></li>
-					<li><a class="nav-link" href="#">ФОТОГАЛЕРЕЯ</a></li>
-					<li><a class="nav-link" href="#">БРОНИРОВАНИЕ</a></li>
-					<li class="border-none"><a class="nav-link" href="#">КОНТАКТЫ</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php 
+	require 'header.php';
+	 ?>
 	<section class="book">
 		<div class="book-text">
 			<span class="bold-text">БРОНИРОВАНИЕ</span>

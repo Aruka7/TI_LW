@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="rus">
 <head>
@@ -10,7 +13,7 @@
 <body>
 	<header>
 		<div class="reghed">
-			<a href="index.html"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
+			<a href="index.php"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
 		<nav>
 			<div class="header-top">
 				<div class="hotel-name">Grand-ele</div>
@@ -20,7 +23,7 @@
 				<ul>
 					<li><a class="nav-link" href="#">О НАС</a></li>
 					<li><a class="nav-link" href="#">ОТЗЫВЫ</a></li>
-					<li><a class="nav-link" href="rooms.html">НОМЕРА</a></li>
+					<li><a class="nav-link" href="rooms.html">НОМЕРА</a></li> 
 					<li><a class="nav-link" href="#">ФОТОГАЛЕРЕЯ</a></li>
 					<li><a class="nav-link" href="#">БРОНИРОВАНИЕ</a></li>
 					<li class="border-none"><a class="nav-link" href="#">КОНТАКТЫ</a></li>
@@ -28,16 +31,15 @@
 			</div>
 		</nav>
 		</div>
-			<form class="reg-form" action="">
-				<h1>Регистрация</h1>
-				<div class="reg-text">Логин</div>
-				<input class="reg-input" type="text" name="login">
-				<div class="reg-text">Имя</div>
-				<input class="reg-input" type="text" name="name">
-				<div class="reg-text">Пароль</div>
+			<form class="reg-form" action="php/auth.php" method="post">
+				<h1>Авторизация</h1>
+				<div class="reg-text">Логин </div>
+				<input class="reg-input" type="text" name="login" value="<?=$_SESSION['regfields']['login']?>">
+				<div class="reg-text">Пароль </div>
 				<input class="reg-input pass" type="password" name="pass">
+				<div class="right"><?=$_SESSION['regerrors'][0]?></div>
 				<br>
-				<button class="reg-btn">Зарегистрироваться</button>
+				<button class="reg-btn">Войти</button>
 			</form>
 	</header>
 		<footer >

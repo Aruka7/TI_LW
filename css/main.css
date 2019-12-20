@@ -234,3 +234,14 @@ footer{
 	padding-left: 30px;
 	padding-right: 30px;
 }
+/*userprofile*/
+.userimg{
+	width: 30px;
+	height: 30px;
+	border-radius: 20px;
+}
+.user-name a{
+	text-decoration: none;
+	color: #fff;
+	margin: 0 10px;
+}
