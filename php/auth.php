@@ -21,8 +21,8 @@ try {
 	}
 		$cook_arr = serialize(array('login' => $login, 'name'=>$user['name'], 'pass' => $pass, 'imgpath' => $user['imgpath']));
  		setcookie('user', $cook_arr, time() + 3600, "/");
- 		header("Location: http://{$_SERVER['SERVER_NAME']}/index.php");
  		$conn = null;
+ 		header("Location: http://{$_SERVER['SERVER_NAME']}/index.php");
  	}
  		catch (Exception $e) {
  		echo "Ошибка подключения";

@@ -22,13 +22,16 @@ main{
 	flex-direction: column;
 	margin: 20px;
 	flex:1 1 30%;
-	max-width: 40%;
+	max-width: 33%;
 	min-width: 250px;
 }
 .room-text{
 	padding: 7px 0 7px 10px;
 }
-.room-display img{
+.hidden-img{
+	overflow: hidden;
+}
+.room-img{
 	border-radius: 10px 10px 0 0;
 	width: 100%;
 }
@@ -39,7 +42,8 @@ main{
 	background-color: #ffd700;
 	cursor: pointer;
 	transition: all .2s linear;
-	margin: 0 10px 10px 7px;
+	margin: 0 10px 10px 10px;
+	flex-grow: 1;
 }
 .sub-btn:hover{
 	background-color: #f6d600;
@@ -78,13 +82,16 @@ margin-top: 10px;
 	border: 1px solid grey;
 	padding: 4px 10px;
 	font-size: 14px;
-	text-align: center;
 }
 .filter-calendar{
-	max-width: 90px;
+	max-width: 140px;
+}
+.filter-cost{
+	max-width: 120px;
 }
 .filter-count{
 	max-width: 40px;
+	text-align: center;
 }
 .filter-btn{
 	padding: 5px 10px;
@@ -94,7 +101,12 @@ margin-top: 10px;
 	background-color: #fff;
 	cursor: pointer;
 	transition: all .2s linear;
+	margin-top: 7px;
 }
 .filter-btn:hover{
 	background-color: #ddd;
+}
+.reserv{
+	width: 100%;
+	display: flex;
 }

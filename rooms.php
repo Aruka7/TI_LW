@@ -1,121 +1,95 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="rus">
 <head>
 	<meta charset="UTF-8">
-	<title>Gand-ele</title>
+	<title>Grand-ele</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link rel="stylesheet" href="css/user.css" type="text/css">
 	<link rel="stylesheet" href="css/rooms.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/header_bg_none.css" type="text/css">
 </head>
 <body>
-	<header style="background: none; padding-bottom: 0;">
-		<a href="index.html"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
-		<nav>
-			<div class="header-top">
-				<div class="hotel-name">Grand-ele</div>
-				<button class="language">Русский/English</button>
-			</div>
-			<div class="nav-panel">
-				<ul>
-					<li><a class="nav-link" href="#">О НАС</a></li>
-					<li><a class="nav-link" href="#">ОТЗЫВЫ</a></li>
-					<li><a class="nav-link" href="#">НОМЕРА</a></li>
-					<li><a class="nav-link" href="#">ФОТОГАЛЕРЕЯ</a></li>
-					<li><a class="nav-link" href="#">БРОНИРОВАНИЕ</a></li>
-					<li class="border-none"><a class="nav-link" href="#">КОНТАКТЫ</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php 
+	require 'header.php';
+	require 'php/request_rooms.php';
+	 ?>
 	<main>
 		<div class="sidebar">
 			<h1>Фильтр</h1>
 			<div class="filter">
-			<form action="">
+			<form action="php/upload_filter_properties.php" method="post">
 				<div>
 					<div class="filter-text">Тип:</div>
-					<select class="filter-select" size="1" name="typeroom">
+					<select class="filter-select" size="1" name="type" option="<?=$_SESSION['filter']['type']?>">
+					<option value="%">Все</option>
 					<option value="common">Стандартный</option>
 					<option value="vip">VIP</option>
 					</select>
 				</div>
 				<div>
 					<div class="filter-text">Свободен с</div>
-					<input class="filter-calendar filter-input" type="text" name="frstDate">
+					<input class="filter-calendar filter-input" type="date" name="firstDate" value="<?=$_SESSION['filter']['firstDate']?>">
 				</div>
 				<div>
 					<div class="filter-text">до</div>
-					<input class="filter-calendar filter-input" type="text" name="lastDate">
+					<input class="filter-calendar filter-input" type="date" name="lastDate" value="<?=$_SESSION['filter']['lastDate']?>">
 				</div>
 				<div>
 					<div class="filter-text">Стоимость в сутки от:</div>
-					<input class="filter-calendar filter-input" type="text" name="frstDate">
+					<input class="filter-cost filter-input" type="text" name="frstCost" value="<?=$_SESSION['filter']['firstCost']?>">
 				</div>
 				<div>
 					<div class="filter-text">до</div>
-					<input class="filter-calendar filter-input" type="text" name="lastDate">
+					<input class="filter-cost filter-input" type="text" name="lastCost" value="<?=$_SESSION['filter']['lastCost']?>">
 				</div>
 				<div>
 					<div class="filter-text">Кол-во человек</div>
-					<input class="filter-count filter-input" type="text" name="countPeople">
-				</div>
-				<div>
-					<div class="filter-text">Свободен:</div>
-					<input class="filter-checkbox" type="checkbox" name="isFree" checked>
+					<input class="filter-count filter-input" type="text" name="countPeople" value="<?=$_SESSION['filter']['countPeople']?>">
 				</div>
 				<button class="filter-btn" type="submit">Найти</button>
 			</form>
 			</div>
 		</div>
 		<div class="wrap">
+			<?php 
+			for ($i=0; $i < count($rooms_array); $i++) { 
+			 ?>
 			<div class="room-display">
-				<img src="img/room1.jpg" alt="room">
+				<div class="hidden-img">
+					<img class="room-img" src="<?=$rooms_array[$i]['path']?>" alt="room">
+				</div>
 				<div class="room-text">
-					<span class="room-type">Тип: Стандартный</span>
+					<span class="room-type">Тип: <?php if($rooms_array[$i]['type']=='common'){
+															echo "Стандартный";
+														}
+														else{
+															echo $rooms_array[$i]['type'];
+														}
+														?>
+					</span>
 					<br>
 					<span class="description">Двухместный номер</span>
-					<span class="number"> №421</span>
+					<span class="number"> №<?=$rooms_array[$i]['idRoom']?></span>
 					<br>
-					<span class="count-members">до 2 мест<span>
+					<span class="count-members">до <?=$rooms_array[$i]['size']?> мест<span>
 					<br>
-					<span class="cost">Стоимость в сутки 2000р.</span>
+					<span class="cost">Стоимость в сутки <?=$rooms_array[$i]['dayCost']?>р.</span>
 				</div>
-				<button class="sub-btn">Забронировать</button>
+				<form class="reserv" action="php/book_redir.php" method="get">
+					<input type="hidden" name="idRoom" value="<?=$rooms_array[$i]['idRoom']?>">
+					<input type="hidden" name="size" value="<?=$rooms_array[$i]['size']?>">
+					<input type="hidden" name="dayCost" value="<?=$rooms_array[$i]['dayCost']?>">
+					<input type="hidden" name="type" value="<?=$rooms_array[$i]['type']?>">
+					<button class="sub-btn">Забронировать</button>
+				</form>
 			</div>
-			<div class="room-display">
-				<img src="img/room1.jpg" alt="room">
-				<div class="room-text">
-					<span class="room-type">Тип: Стандартный</span>
-					<br>
-					<span class="description">Двухместный номер</span>
-					<span class="number"> №421</span>
-					<br>
-					<span class="count-members">до 2 мест<span>
-					<br>
-					<span class="cost">Стоимость в сутки 2000р.</span>
-				</div>
-				<button class="sub-btn">Забронировать</button>
-			</div>
-			<div class="room-display">
-				<img src="img/room1.jpg" alt="room">
-				<div class="room-text">
-					<span class="room-type">Тип: Стандартный</span>
-					<br>
-					<span class="description">Двухместный номер</span>
-					<span class="number"> №421</span>
-					<br>
-					<span class="count-members">до 2 мест<span>
-					<br>
-					<span class="cost">Стоимость в сутки 2000р.</span>
-				</div>
-				<button class="sub-btn">Забронировать</button>
-			</div>
+			<?php } ?>
 		</div>
 	</main>
-		<footer >
-		<div class="text-gold">Сайт разработан Kharin & Kulishkin ind.</div>
-		<div class="text-gold">2019г</div>
-		<div class="text-gold">Все права защищены</div>
-	</footer>
+		<?php 
+		require 'footer.php';
+		 ?>
 </body>
 </html>

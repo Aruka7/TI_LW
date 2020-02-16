@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="rus">
 <head>
@@ -17,13 +20,13 @@
 			<br>
 			<span class="small-text">Гарантия лучшей цены</span>
 		</div>
-		<form action="" class="book-form">
+		<form action="php/redir.php" method="get" class="book-form">
 			<div class="form-text">Заезд</div>
-			<input class="form-input calendar" type="date">
+			<input class="form-input calendar" type="date" name="firstDate">
 			<div class="form-text">Выезд</div>
-			<input class="form-input calendar" type="date">
+			<input class="form-input calendar" type="date" name="lastDate">
 			<div class="form-text">Гостей</div>
-			<input class="form-input form-number" type="text" value="1">
+			<input class="form-input form-number" type="text" value="1" name="size">
 			<button class="book-btn" type="submit">Найти</button>
 		</form>
 	</section>
