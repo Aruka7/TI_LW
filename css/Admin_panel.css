@@ -1,0 +1,17 @@
+.admin-main{
+	height: 90vh;
+	padding: 20px;
+}
+.admin-form div{
+	display: flex;
+	flex-direction: column;
+}
+.add-btn{
+	max-width: 150px;
+	margin-top: 5px;
+}
+.error-text{
+	color: red;
+	font-size: 14px;
+	margin-top: 10px;
+}

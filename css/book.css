@@ -1,0 +1,38 @@
+main{
+	background-color: #f6eed5;
+	min-height: 700px;
+}
+.book-wrap{
+	margin: 0 auto;
+	padding-top: 15px;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+.book-form{
+	display: flex;
+	flex-direction: column;
+}
+.room-data{
+	display: flex;
+	flex-direction: column;
+}
+.input{
+	border-radius: 5px;
+	border: 1px solid grey;
+	padding: 5px 10px;
+}
+.btn-book{
+	border-radius: 7px;
+	border: 1px solid grey;
+	padding: 5px 10px;	
+	font-size: 18px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.btn-book:hover{
+	background-color: #ddd;
+}
+.info-text{
+	font-size: 	25px;
+}

@@ -42,4 +42,9 @@ header{
 .pass{
 	font-weight: bold;
 }
+.right{
+	color: red;
+	font-size: 10px;
+	text-align: right
+}
 

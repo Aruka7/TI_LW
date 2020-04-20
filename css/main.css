@@ -15,7 +15,7 @@ header{
 	background-repeat: no-repeat;
 	background-position: 50% 100%;
 	background-size: 100%;
-	padding-bottom: 35%;
+	padding-bottom: 31%;
 }
 .header-top{
 	display: flex;
@@ -120,6 +120,10 @@ nav{
 	margin: auto;
 	padding: 7px;
 }
+.calendar{
+	text-align: center;
+	font-size: 15px;
+}
 .form-number{
 	width: 50px;
 	text-align: center;
@@ -140,19 +144,20 @@ nav{
 	background-color: #f6eed5;
 }
 .history h1{
-	padding: 50px 0px 20px 70px;
+	padding: 50px 0px 20px 5%;
 }
 .content{
 	display: flex;
 }
-.content img{
+.history-img{
 	border-radius: 10px;
-	width: 450px;
-	margin: 20px 0 40px 40px;
+	width: 400px;
+	margin: 20px 0 40px 5%;
 }
 .history-text{
 	font-size: 36px;
 	padding: 0 20px 0 20px;
+	max-width: 50%;
 	display: flex;
 	align-items: center;
 }

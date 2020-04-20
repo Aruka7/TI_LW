@@ -1,55 +1,40 @@
+<?php 
+session_start();
+require 'php/CounterVisitings.php';
+ ?>
 <!DOCTYPE html>
 <html lang="rus">
 <head>
 	<meta charset="UTF-8">
-	<title>Gand-ele</title>
+	<title>Grand-ele</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/user.css">
 </head>
 <body>
-	<header>
-		<a href="#"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
-		<nav>
-			<div class="header-top">
-				<div class="hotel-name">Grand-ele</div>
-				<div class="header-right">
-					<button class="language">Русский/English</button>
-					<div class="auth"><a href="authform.html">Войти</a></div>
-					<div class="auth"><a href="regform.html">Регистрация</a></div>
-				</div>
-			</div>
-			<div class="nav-panel">
-				<ul>
-					<li><a class="nav-link" href="#">О НАС</a></li>
-					<li><a class="nav-link" href="#">ОТЗЫВЫ</a></li>
-					<li><a class="nav-link" href="rooms.html">НОМЕРА</a></li>
-					<li><a class="nav-link" href="#">ФОТОГАЛЕРЕЯ</a></li>
-					<li><a class="nav-link" href="#">БРОНИРОВАНИЕ</a></li>
-					<li class="border-none"><a class="nav-link" href="#">КОНТАКТЫ</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
+	<?php 
+	require 'header.php';
+	 ?>
 	<section class="book">
 		<div class="book-text">
 			<span class="bold-text">БРОНИРОВАНИЕ</span>
 			<br>
 			<span class="small-text">Гарантия лучшей цены</span>
 		</div>
-		<form action="" class="book-form">
+		<form action="php/redir.php" method="get" class="book-form">
 			<div class="form-text">Заезд</div>
-			<input class="form-input calendar" type="text">
+			<input class="form-input calendar" type="date" name="firstDate">
 			<div class="form-text">Выезд</div>
-			<input class="form-input calendar" type="text">
+			<input class="form-input calendar" type="date" name="lastDate">
 			<div class="form-text">Гостей</div>
-			<input class="form-input form-number" type="text">
+			<input class="form-input form-number" type="text" value="1" name="size">
 			<button class="book-btn" type="submit">Найти</button>
 		</form>
 	</section>
 	<section class="history">
 		<h1>История отеля Grand-ele</h1>
 		<div class="content">
-			<img src="img/History.jpg" alt="History">
+			<img class="history-img" src="img/History.jpg" alt="History">
 			<div class="history-text">
 				Уже более 60 лет наш отель радует своих постояльцев
 				высоким качеством обслуживания, уютными
@@ -109,10 +94,8 @@
 	<section class="map">
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeaef5f4f166ace2da00974d4bed9f6677b562daaa5a3f68544fbc97f66a0f4d7&amp;width=100%25&amp;height=447&amp;lang=ru_RU&amp;scroll=true"></script>
 	</section>
-	<footer >
-		<div class="text-gold">Сайт разработан Kharin & Kulishkin ind.</div>
-		<div class="text-gold">2019г</div>
-		<div class="text-gold">Все права защищены</div>
-	</footer>
+	<?php 
+	require 'footer.php';
+	 ?>
 </body>
 </html>
