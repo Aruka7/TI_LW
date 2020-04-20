@@ -6,6 +6,7 @@
 	<title>Grand-ele</title>
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 	<link rel="stylesheet" href="css/book.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/user.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/header_bg_none.css" type="text/css">
 </head>

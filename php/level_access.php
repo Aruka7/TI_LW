@@ -1,17 +1,7 @@
-<?php
-session_start();
-$login = (trim($_POST['login']));
-$pass = (trim($_POST['pass']));
-$_SESSION['regfields']['login'] = $login;
-$_SESSION['regerrors'][0] = "";
-
-$host = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'grandeledb';
+<?php 
 try {
  	$conn = new mysqli($host,$username,$password,$dbname);
- 	$sql = "SELECT * FROM `users` WHERE `login` = '$login' AND `password` = '$pass'";
+ 	$sql = "SELECT * FROM `users` WHERE `login` = '$cook_arr['login']' AND `password` = '$cook_arr['pass']'";
 	$result = $conn->query($sql);
 	$user = $result->fetch_assoc();
 	if(count($user)== 0){
@@ -28,4 +18,4 @@ try {
  		echo "Ошибка";
  		exit(); 
  	} 
-?>
+ ?>

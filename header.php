@@ -1,4 +1,7 @@
 <header>
+	<?php 
+	require 'php/CounterVisitings.php';
+	 ?>
 		<a href="index.php"><img class="logo" src="img/Logo.jpg" alt="Logo"></a>
 		<nav>
 			<div class="header-top">

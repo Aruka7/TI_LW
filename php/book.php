@@ -66,14 +66,13 @@ try {
 	$idClient = $client['idClient'];
 	$result->free();
 	//todo: проверить свободна ли комната
-	$sql = "INSERT INTO `reservation` (`idRes`,`arrivalDate`,`departureDay`,`totCost`,`idClient`,`idRoom`) VALUES (NULL,'$arrivalDate','$departureDate',(TO_DAYS('$departureDate') - TO_DAYS('$arrivalDate'))*'$cost','$idClient','$idRoom')";
+
+	$sql = "INSERT INTO `reservation` (`arrivalDate`,`departureDay`,`totCost`,`idClient`,`idRoom`) VALUES ('$arrivalDate','$departureDate',(TO_DAYS('$departureDate') - TO_DAYS('$arrivalDate'))*'$cost','$idClient','$idRoom')";
  	$conn->query($sql);
  	$conn->close();
- 	$_SESSION['bookerrors'] = "ништяк";
+ 	$_SESSION['bookerrors'] = "Успешно";
  	header("Location: http://{$_SERVER['SERVER_NAME']}/book.php");
 } catch (Exception $e) {
 	$_SESSION['bookerrors'] = "Ошибка запроса данных";
-	header("Location: http://{$_SERVER['SERVER_NAME']}/book.php");
 	exit();
 }
- ?>

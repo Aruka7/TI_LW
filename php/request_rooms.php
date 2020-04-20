@@ -37,7 +37,7 @@ try {
  	$conn = new mysqli($host,$username,$password,$dbname);
  	$sql = "SELECT * 
 			FROM `room` 
-			WHERE idRoom NOT IN
+			WHERE `idRoom` NOT IN
 				(SELECT `room`.`idRoom`
  				 FROM `room`, `reservation`
  				 WHERE `room`.`idRoom` = `reservation`.`idRoom` AND (('$firstDate'>=`reservation`.`arrivalDate`AND'$firstDate'<`reservation`.`departureDate`)OR
@@ -49,7 +49,7 @@ try {
 	$result = $conn->query($sql);
 	}
 	catch(Exception $e){
-		echo "Ошибка подключения";
+		echo "Ошибка";
 		exit();
 	}
 	$i = 0;

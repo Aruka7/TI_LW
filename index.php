@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require 'php/CounterVisitings.php';
  ?>
 <!DOCTYPE html>
 <html lang="rus">
